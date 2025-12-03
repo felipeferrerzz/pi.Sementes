@@ -1,8 +1,6 @@
 const form = document.getElementById("form-contato");
 
-
 const botoesComprar = document.querySelectorAll(".btn");
-
 
 const btnEnviar = document.getElementById("btn-enviar");
 
@@ -13,7 +11,6 @@ botoesComprar.forEach(botao => {
     });
 });
 
-
 btnEnviar.addEventListener("click", () => {
     const nome = document.getElementById("nome").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -23,5 +20,6 @@ btnEnviar.addEventListener("click", () => {
         alert("Por favor, preencha todos os campos!");
     } else {
         alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso!`);
+        window.location.href = "/obrigado";
     }
 });

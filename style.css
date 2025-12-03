@@ -1,0 +1,145 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(64, 2, 189, 0.97);
+    margin: 0;
+    padding: 0;
+}
+
+/* Rodapé superior */
+.top-footer{
+    background-color: white;
+    height: 40px;
+}
+
+/* Título */
+h1{
+    text-align: center;
+    margin-top: 25px;
+    color: white;
+    font-size: 30px;
+}
+
+/* Grid dos produtos */
+.produtos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* Card dos produtos */
+.produto{
+    background-color: white;
+    padding: 15px;
+    width: 170px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform .2s ease;
+}
+
+/* Card cresce um pouco no hover */
+.produto:hover{
+    transform: scale(1.04);
+}
+
+/* Imagens todas da mesma cor */
+.produto img{
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    /* Todas iguais — preto e branco */
+    filter: grayscale(100%);
+    transition: filter .3s ease, transform .3s ease;
+}
+
+/* No hover a imagem volta à cor */
+.produto:hover img{
+    filter: grayscale(0%);
+}
+
+/* Corrigido */
+.produto h3{
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.preco{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* Botão comprar */
+.btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background .3s;
+}
+
+.btn:hover {
+    background: #0d54b8;
+}
+
+/* Rodapé inferior */
+.bottom-footer {
+    background-color: white;
+    height: 40px;
+    margin-top: 20px;
+}
+
+/* Formulário */
+form {
+    background: white;
+    padding: 20px;
+    margin: 40px auto;
+    width: 300px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form button {
+    background: #1a73e8;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background .3s;
+}
+
+form button:hover {
+    background: #0d54b8;
+}
+
+
+form {
+    display: none;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+
+form.mostrar {
+    display: flex;
+    opacity: 1;
+}
